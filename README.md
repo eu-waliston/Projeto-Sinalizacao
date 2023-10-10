@@ -6,4 +6,7 @@ O Sistema Sinalético da UFSM foi desenvolvido com base em uma análise cuidados
 
 As novas placas incluem as traduções para o inglês. Essa medida é de suma importância para a internacionalização da universidade, uma vez que contribui para a orientação e melhor experiência dos visitantes estrangeiros que frequentam a instituição.
 
-Juntamente com essas placas, estará disponível um Qr Code que irá enviar o usuário para um ambiente web interativo que conterá além das informações já existentes nas placas, e outras também muito importantes.  
+Juntamente com essas placas, estará disponível um Qr Code que irá enviar o usuário para um ambiente web interativo que conterá além das informações já existentes nas placas, e outras também muito importantes. 
+
+![projeto-sinalicacao-3](https://github.com/wal-wizard/Projeto-Sinalizacao/assets/82295321/2bacbe60-a8ac-44fd-93ba-c12e3fc9e97e)
+
