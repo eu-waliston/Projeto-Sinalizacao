@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.ufsm.br/app/themes/ufsm/images/brasao.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+    <title>Sinalização UFSM</title>
+</head>
+
+<body>
+    <div id="home">
+        <div class="container">
+
+            <div class="todos__locais">
+                <button class="btn btn-outline-light" id="todos_locais" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-geo-alt-fill"></i>
+                    Todos os Locais</button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel">Todos os Locais</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>INOVATEC</span> - Agência
+                            de Inovação e Transferência de Tecnologia</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>CEU</span> - Assistência
+                            Estudantil</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>CAL</span> - Centro de
+                            Artes e Letras</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>CCNE</span> - Centro de
+                            Ciências Naturais e Exatas</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>CCR</span> - Centro de
+                            Ciências Rurais</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>CCS</span> - Centro de
+                            Ciências da Saúde</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>CCSH</span> - Centro de
+                            Ciências Sociais e Humanas</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>CE</span> - Centro de
+                            Educação</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>CEFD</span> - Centro de
+                            Educação Física e Desporto</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>CT</span> - Centro de
+                            Tecnologia</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>CTISM</span> - Colégio
+                            Técnico Industrial de Santa Maria</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> Colégio Politécnico</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>FATEC</span> - Fundação de
+                            Apoio à Tecnologia e Ciência</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>HUSM</span> - Hospital
+                            Universitário de Santa Maria</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>INPE</span> - Centro
+                            Regional Sul de Pesquisas Espaciais</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> Unidade de Educação Infantil Ipê
+                            Amarelo</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> Reitoria</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> Memorial</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> Planetário</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>RU</span> - Restuarante
+                            Universitário</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> Centro de Convenções</a>
+
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i><span>HVU</span> - Hospital
+                            Veterinário Universitário</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="top__info">
+                <h1>Casa do Estudante - CEU</h1>
+                <p>Student Dorm</p>
+            </div>
+
+            <div id="info__section" class="row">
+
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div id="map"></div>
+                </div>
+
+
+
+                <div id="reitoria__places" class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="places ">
+
+                        <!-- Buttons trigger modals -->
+                        <div type="button" class="btn btn-primary suqare__builds" data-bs-toggle="modal"
+                            data-bs-target="#CEU-32">
+                            <h5 class="span">32&nbsp;&nbsp;&nbsp;</h5>
+
+                            <div>
+                                <h5 class="centers">Blocos 11 a 15</h5>
+                                <h5 class="traducion">Blocks 11 to 15</h5>
+                            </div>
+                        </div>
+
+                        <div type="button" class="btn btn-primary suqare__builds" data-bs-toggle="modal"
+                            data-bs-target="#CEU-32">
+                            <h5 class="span">33&nbsp;&nbsp;&nbsp;</h5>
+                            <div>
+                                <h5 class="centers">Blocos 21 a 26</h5>
+                                <h5 class="traducion">Blocks 21 to 26</h5>
+                            </div>
+                        </div>
+
+                        <div type="button" class="btn btn-primary suqare__builds" data-bs-toggle="modal"
+                            data-bs-target="#CEU-34">
+                            <h5 class="span">34&nbsp;&nbsp;</h5>
+                            <div>
+                                <h5 class="centers">Blocos 30 a 35</h5>
+                                <h5 class="traducion">Blocks 30 to 35</h5>
+                            </div>
+                        </div>
+
+                        <div class="btn btn-primary suqare__builds" data-bs-toggle="modal" data-bs-target="#CEU-35">
+                            <h5 class="span">35&nbsp;&nbsp;&nbsp;</h5>
+                            <div>
+                                <h5 class="centers">Blocos 41 a 46</h5>
+                                <h5 class="traducion">Blocks 41 to 46</h5>
+                            </div>
+                        </div>
+
+                        <div class="btn btn-primary suqare__builds" data-bs-toggle="modal" data-bs-target="#CEU-36">
+                            <h5 class="span">36&nbsp;&nbsp;&nbsp;</h5>
+                            <div>
+                                <h5 class="centers">Blocos 50 a 55 (CEU III)</h5>
+                                <h5 class="traducion">Blocks 50 a 55 (CEU III)</span>
+                                </h5>
+                            </div>
+                        </div>
+
+                        <div class="btn btn-primary suqare__builds" data-bs-toggle="modal" data-bs-target="#CEU-37">
+                            <h5 class="span">37&nbsp;&nbsp;&nbsp;</h5>
+                            <div>
+                                <h5 class="centers">Blocos 60 a 63</h5>
+                                <h5 class="traducion">Blocks 60 to 63</span>
+                                </h5>
+                            </div>
+                        </div>
+
+                        <div class="btn btn-primary suqare__builds" data-bs-toggle="modal" data-bs-target="#CEU-38">
+                            <h5 class="span">38&nbsp;&nbsp;&nbsp;</h5>
+                            <div>
+                                <h5 class="centers">Casa do Estudante Indígena</h5>
+                                <h5 class="traducion">Indigenous Student’s House</span>
+                                </h5>
+                            </div>
+                        </div>
+
+                        <div class="btn btn-primary suqare__builds" data-bs-toggle="modal" data-bs-target="#CEU-55">
+                            <h5 class="span">55&nbsp;&nbsp;&nbsp;</h5>
+                            <div>
+                                <h5 class="centers">Inter House</h5>
+                                <h5 class="traducion">Inter House</span>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modals -->
+                    <div class="modal fade" id="CEU-32" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content ">
+
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body row">
+
+                                    <div class="col-md-5 ms-auto">
+                                        <div id="carouselExampleControls" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+
+                                                <div class="carousel-item active card" id="card-effect">
+                                                    <img src="./images/CEU-CARDS/CEU-CARD-32.png" alt="..."
+                                                        class="d-block w-100" id="predio-51">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="grid__informations ">
+                                            <a href="https://goo.gl/maps/yYkUi8eC4X7jvty99" target="_blank"><i
+                                                    class="bi bi-geo-alt-fill"></i>Rua Leste 12, CEP
+                                                97.105-900 - Camobi, Santa Maria - RS</a>
+
+                                            <a href="callto:(55) 3220-8395"><i class="bi bi-telephone-fill"></i> (55)
+                                                3220-8395</a>
+
+                                            <p id="email"><a href="mailto:cefd@ufsm.br"><i
+                                                        class="bi bi-envelope"></i>cefd@ufsm.br</a></p>
+                                            <a href="https://www.instagram.com/cefdufsm/" target="_blank"><i
+                                                    class="bi bi-instagram"></i>instagram</a>
+
+                                            <a href="https://www.ufsm.br/unidades-universitarias/cefd"
+                                                target="_blank"><i class="bi bi-globe"></i>
+                                                mais infomações</a>
+
+                                            <a>
+                                                <i class="bi bi-clock-fill"></i>
+                                                horario de funcionamento: Seg - Sex das 07:00 – 19:00
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="col-md-7 ms-auto">
+                                        <div id="carouselExampleControls" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner" id="mod-2">
+
+
+                                                <div class="carousel-item active">
+                                                    <img src="./images/CEFD-SLIDE/2017-12-02 (1).jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item">
+                                                    <img src="./images/CEFD-SLIDE/2017-12-02 (2).jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item">
+                                                    <img src="./images/CEFD-SLIDE/2017-12-02 (3).jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn  btn-outline-danger" data-bs-dismiss="modal"><i
+                                            class="bi bi-x-lg"></i>Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="CEU-33" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content ">
+
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body row">
+
+                                    <div class="col-md-5 ms-auto">
+
+                                        <div id="carouselExampleControls1" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+
+                                                <div class="carousel-item active card" id="card-effect">
+                                                    <img src="./images/CEU-CARDS/CEU-CARD-33.png" alt="...."
+                                                        class="d-block w-100 " id="predio-51B">
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <div class="grid__informations ">
+                                            <a href="https://goo.gl/maps/yYkUi8eC4X7jvty99" target="_blank"><i
+                                                    class="bi bi-geo-alt-fill"></i>Rua Leste 12, CEP
+                                                97.105-900 - Camobi, Santa Maria - RS</a>
+
+                                            <a href="callto:(55) 3220-8395"><i class="bi bi-telephone-fill"></i> (55)
+                                                3220-8395</a>
+
+                                            <p id="email"><a href="mailto:cefd@ufsm.br"><i
+                                                        class="bi bi-envelope"></i>cefd@ufsm.br</a></p>
+                                            <a href="https://www.instagram.com/cefdufsm/" target="_blank"><i
+                                                    class="bi bi-instagram"></i>instagram</a>
+
+                                            <a href="https://www.ufsm.br/unidades-universitarias/cefd"
+                                                target="_blank"><i class="bi bi-globe"></i>
+                                                mais infomações</a>
+
+                                            <a>
+                                                <i class="bi bi-clock-fill"></i>
+                                                horario de funcionamento: Seg - Sex das 07:00 – 19:00
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="col-md-7 ms-auto">
+                                        <div id="carouselExampleControls1" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="./images/CEFD-SLIDE/2017-12-02.jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item ">
+                                                    <img src="./images/CEFD-SLIDE/20180914_183848.jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item ">
+                                                    <img src="./images/CEFD-SLIDE/2019-10-22.jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn  btn-outline-danger" data-bs-dismiss="modal"><i
+                                            class="bi bi-x-lg"></i>Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="CEU-34" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content ">
+
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body row">
+
+                                    <div class="col-md-5 ms-auto">
+
+                                        <div id="carouselExampleControls2" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active card" id="card-effect">
+                                                    <img src="./images/CEU-CARDS/CEU-CARD-34.png" alt="...."
+                                                        class="d-block w-100 " id="predio-54">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="grid__informations ">
+                                            <a href="https://goo.gl/maps/yYkUi8eC4X7jvty99" target="_blank"><i
+                                                    class="bi bi-geo-alt-fill"></i>Rua Leste 12, CEP
+                                                97.105-900 - Camobi, Santa Maria - RS</a>
+
+                                            <a href="callto:(55) 3220-8395"><i class="bi bi-telephone-fill"></i> (55)
+                                                3220-8395</a>
+
+                                            <p id="email"><a href="mailto:cefd@ufsm.br"><i
+                                                        class="bi bi-envelope"></i>cefd@ufsm.br</a></p>
+                                            <a href="https://www.instagram.com/cefdufsm/" target="_blank"><i
+                                                    class="bi bi-instagram"></i>instagram</a>
+
+                                            <a href="https://www.ufsm.br/unidades-universitarias/cefd"
+                                                target="_blank"><i class="bi bi-globe"></i>
+                                                mais infomações</a>
+
+                                            <a>
+                                                <i class="bi bi-clock-fill"></i>
+                                                horario de funcionamento: Seg - Sex das 07:00 – 19:00
+                                            </a>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-7 ms-auto">
+                                        <div id="carouselExampleControls2" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+
+                                                <div class="carousel-item active">
+                                                    <img src="./images/CEFD-SLIDE/2022-10-23.jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item">
+                                                    <img src="./images/CEFD-SLIDE/2023-03-30.jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item">
+                                                    <img src="./images/CEFD-SLIDE/2023-03-30.jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn  btn-outline-danger" data-bs-dismiss="modal"><i
+                                            class="bi bi-x-lg"></i>Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="CEU-35" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content ">
+
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body row">
+
+                                    <div class="col-md-5 ms-auto">
+                                        <div id="carouselExampleControls3" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+
+                                                <div class="carousel-item active card" id="card-effect">
+                                                    <img src="./images/CEU-CARDS/CEU-CARD-35.png" alt="...."
+                                                        class="d-block w-100 " id="predio-57">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="grid__informations ">
+                                            <a href="https://goo.gl/maps/yYkUi8eC4X7jvty99" target="_blank"><i
+                                                    class="bi bi-geo-alt-fill"></i>Rua Leste 12, CEP
+                                                97.105-900 - Camobi, Santa Maria - RS</a>
+
+                                            <a href="callto:(55) 3220-8395"><i class="bi bi-telephone-fill"></i> (55)
+                                                3220-8395</a>
+
+                                            <p id="email"><a href="mailto:cefd@ufsm.br"><i
+                                                        class="bi bi-envelope"></i>cefd@ufsm.br</a></p>
+                                            <a href="https://www.instagram.com/cefdufsm/" target="_blank"><i
+                                                    class="bi bi-instagram"></i>instagram</a>
+
+                                            <a href="https://www.ufsm.br/unidades-universitarias/cefd"
+                                                target="_blank"><i class="bi bi-globe"></i>
+                                                mais infomações</a>
+
+                                            <a>
+                                                <i class="bi bi-clock-fill"></i>
+                                                horario de funcionamento: Seg - Sex das 07:00 – 19:00
+                                            </a>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-7 ms-auto">
+                                        <div id="carouselExampleControls3" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+
+
+
+                                                <div class="carousel-item active">
+                                                    <img src="./images/CEFD-SLIDE/2023-04-06.jpg" alt="...."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item">
+                                                    <img src="./images/CEFD-SLIDE/2023-04-18.jpg" alt="...."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item">
+                                                    <img src="./images/CEFD-SLIDE/Screenshot_7.png" alt="...."
+                                                        class="d-block w-100 bg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn  btn-outline-danger" data-bs-dismiss="modal"><i
+                                            class="bi bi-x-lg"></i>Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="CEU-36" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content ">
+
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body row">
+
+                                    <div class="col-md-5 ms-auto">
+
+                                        <div id="carouselExampleControls4" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+
+                                                <div class="carousel-item active card" id="card-effect">
+                                                    <img src="./images/CEU-CARDS/CEU-CARD-36.png" alt="..."
+                                                        class="d-block w-100 " id="predio-56">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="grid__informations ">
+                                            <a href="https://goo.gl/maps/yYkUi8eC4X7jvty99" target="_blank"><i
+                                                    class="bi bi-geo-alt-fill"></i>Rua Leste 12, CEP
+                                                97.105-900 - Camobi, Santa Maria - RS</a>
+
+                                            <a href="callto:(55) 3220-8395"><i class="bi bi-telephone-fill"></i> (55)
+                                                3220-8395</a>
+
+                                            <p id="email"><a href="mailto:cefd@ufsm.br"><i
+                                                        class="bi bi-envelope"></i>cefd@ufsm.br</a></p>
+                                            <a href="https://www.instagram.com/cefdufsm/" target="_blank"><i
+                                                    class="bi bi-instagram"></i>instagram</a>
+
+                                            <a href="https://www.ufsm.br/unidades-universitarias/cefd"
+                                                target="_blank"><i class="bi bi-globe"></i>
+                                                mais infomações</a>
+
+                                            <a>
+                                                <i class="bi bi-clock-fill"></i>
+                                                horario de funcionamento: Seg - Sex das 07:00 – 19:00
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="col-md-7 ms-auto">
+                                        <div id="carouselExampleControls4" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+
+
+                                                <div class="carousel-item active ">
+                                                    <img src="./images/CEFD-SLIDE/Screenshot_7.png" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item ">
+                                                    <img src="./images/CEFD-SLIDE/Screenshot_8.png" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item ">
+                                                    <img src="./images/CEFD-SLIDE/2017-12-02 (1).jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn  btn-outline-danger" data-bs-dismiss="modal"><i
+                                            class="bi bi-x-lg"></i>Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="modal fade" id="CEU-37" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content ">
+
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body row">
+
+                                    <div class="col-md-5 ms-auto">
+
+                                        <div id="carouselExampleControls4" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+
+                                                <div class="carousel-item active card" id="card-effect">
+                                                    <img src="./images/CEU-CARDS/CEU-CARD-37.png" alt="..."
+                                                        class="d-block w-100 " id="predio-55A">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="grid__informations ">
+                                            <a href="https://goo.gl/maps/yYkUi8eC4X7jvty99" target="_blank"><i
+                                                    class="bi bi-geo-alt-fill"></i>Rua Leste 12, CEP
+                                                97.105-900 - Camobi, Santa Maria - RS</a>
+
+                                            <a href="callto:(55) 3220-8395"><i class="bi bi-telephone-fill"></i> (55)
+                                                3220-8395</a>
+
+                                            <p id="email"><a href="mailto:cefd@ufsm.br"><i
+                                                        class="bi bi-envelope"></i>cefd@ufsm.br</a></p>
+                                            <a href="https://www.instagram.com/cefdufsm/" target="_blank"><i
+                                                    class="bi bi-instagram"></i>instagram</a>
+
+                                            <a href="https://www.ufsm.br/unidades-universitarias/cefd"
+                                                target="_blank"><i class="bi bi-globe"></i>
+                                                mais infomações</a>
+
+                                            <a>
+                                                <i class="bi bi-clock-fill"></i>
+                                                horario de funcionamento: Seg - Sex das 07:00 – 19:00
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="col-md-7 ms-auto">
+                                        <div id="carouselExampleControls4" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+
+
+                                                <div class="carousel-item active ">
+                                                    <img src="./images/CEFD-SLIDE/2017-12-02 (3).jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item ">
+                                                    <img src="./images/CEFD-SLIDE/20180914_183848.jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item ">
+                                                    <img src="./images/CEFD-SLIDE/2023-04-06.jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn  btn-outline-danger" data-bs-dismiss="modal"><i
+                                            class="bi bi-x-lg"></i>Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="modal fade" id="CEU-38" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content ">
+
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body row">
+
+                                    <div class="col-md-5 ms-auto">
+
+                                        <div id="carouselExampleControls4" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+
+                                                <div class="carousel-item active card" id="card-effect">
+                                                    <img src="./images/CEU-CARDS/CEU-CARD-38.png" alt="..."
+                                                        class="d-block w-100 " id="predio-55B">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="grid__informations ">
+                                            <a href="https://goo.gl/maps/yYkUi8eC4X7jvty99" target="_blank"><i
+                                                    class="bi bi-geo-alt-fill"></i>Rua Leste 12, CEP
+                                                97.105-900 - Camobi, Santa Maria - RS</a>
+
+                                            <a href="callto:(55) 3220-8395"><i class="bi bi-telephone-fill"></i> (55)
+                                                3220-8395</a>
+
+                                            <p id="email"><a href="mailto:cefd@ufsm.br"><i
+                                                        class="bi bi-envelope"></i>cefd@ufsm.br</a></p>
+                                            <a href="https://www.instagram.com/cefdufsm/" target="_blank"><i
+                                                    class="bi bi-instagram"></i>instagram</a>
+
+                                            <a href="https://www.ufsm.br/unidades-universitarias/cefd"
+                                                target="_blank"><i class="bi bi-globe"></i>
+                                                mais infomações</a>
+
+                                            <a>
+                                                <i class="bi bi-clock-fill"></i>
+                                                horario de funcionamento: Seg - Sex das 07:00 – 19:00
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="col-md-7 ms-auto">
+                                        <div id="carouselExampleControls4" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+
+
+                                                <div class="carousel-item active ">
+                                                    <img src="./images/CEFD-SLIDE/2023-04-06.jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item ">
+                                                    <img src="./images/CEFD-SLIDE/2017-12-02.jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item ">
+                                                    <img src="./images/CEFD-SLIDE/Screenshot_7.png" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn  btn-outline-danger" data-bs-dismiss="modal"><i
+                                            class="bi bi-x-lg"></i>Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="modal fade" id="CEU-55" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content ">
+
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body row">
+
+                                    <div class="col-md-5 ms-auto">
+
+                                        <div id="carouselExampleControls4" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+
+                                                <div class="carousel-item active card" id="card-effect">
+                                                    <img src="./images/CEU-CARDS/CEU-CARD-55.png" alt="..."
+                                                        class="d-block w-100 " id="predio-55B">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="grid__informations ">
+                                            <a href="https://goo.gl/maps/yYkUi8eC4X7jvty99" target="_blank"><i
+                                                    class="bi bi-geo-alt-fill"></i>Rua Leste 12, CEP
+                                                97.105-900 - Camobi, Santa Maria - RS</a>
+
+                                            <a href="callto:(55) 3220-8395"><i class="bi bi-telephone-fill"></i> (55)
+                                                3220-8395</a>
+
+                                            <p id="email"><a href="mailto:cefd@ufsm.br"><i
+                                                        class="bi bi-envelope"></i>cefd@ufsm.br</a></p>
+                                            <a href="https://www.instagram.com/cefdufsm/" target="_blank"><i
+                                                    class="bi bi-instagram"></i>instagram</a>
+
+                                            <a href="https://www.ufsm.br/unidades-universitarias/cefd"
+                                                target="_blank"><i class="bi bi-globe"></i>
+                                                mais infomações</a>
+
+                                            <a>
+                                                <i class="bi bi-clock-fill"></i>
+                                                horario de funcionamento: Seg - Sex das 07:00 – 19:00
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="col-md-7 ms-auto">
+                                        <div id="carouselExampleControls4" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+
+
+                                                <div class="carousel-item active ">
+                                                    <img src="./images/CEFD-SLIDE/2023-04-06.jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item ">
+                                                    <img src="./images/CEFD-SLIDE/2017-12-02.jpg" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+                                                <div class="carousel-item ">
+                                                    <img src="./images/CEFD-SLIDE/Screenshot_7.png" alt="..."
+                                                        class="d-block w-100 bg">
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn  btn-outline-danger" data-bs-dismiss="modal"><i
+                                            class="bi bi-x-lg"></i>Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="locais__proximos">
+                <button class="btn btn-outline-light" id="locais_proximos" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+                        class="bi bi-geo-alt-fill"></i> Locais Próximos</button>
+
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                    aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Locais Próximos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>C</span>olégio
+                            <span>P</span>olitécnico</a>
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i><span>CCSH</span> -
+                            <span>C</span>entro de <span>C</span>iências <span>S</span>ociais e <span>H</span>umanas</a>
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>AGITTEC</span> -<span>
+                                A</span>gência de <span>i</span>novação e <span>T</span>ransferência de
+                            <span>T</span>ecnologia</a>
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>CEFD</span> -
+                            <span>C</span>entro de <span>E</span>ducação <span>F</span>ísica e <span>D</span>esporto</a>
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>A</span>ssistência
+                            <span>E</span>studantil</a>
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>CAL</span> –
+                            <span>C</span>urso de <span>D</span>ança </a>
+                        <a href="#" target="_blank"><i class="bi bi-geo-alt-fill"></i> <span>CCR</span> –
+                            <span>C</span>entro de <span>C</span>iências <span>R</span>urais</a>
+                    </div>
+                </div>
+            </div>
+
+            <img src="images/CAL_hor_cor-A.png" alt="logo" class="logo__centro">
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

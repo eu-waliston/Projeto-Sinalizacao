@@ -1,0 +1,637 @@
+* {
+    font-family: "Poppins";
+
+}
+
+#home {
+
+    height: 100vh;
+    width: 100%;
+
+    background-image: url("../images/fundo-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    height: 100vh;
+}
+.top__info {
+    position: relative;
+    top: 120px;
+}
+
+.top__info h1,
+.top__info p {
+    color: #fff;
+}
+
+.top__info h1 {
+    font-size: 4rem;
+}
+
+.top__info p {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.ufsm {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+iframe {
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.411);
+}
+
+#info__section {
+    margin-top: 15%;
+}
+
+i {
+    position: relative;
+    margin-right: 10px;
+}
+
+.places {
+    position: relative;
+    top: -20px;
+
+
+}
+.places div {
+    margin-bottom: 8px;
+    background-color: transparent;
+    border: none;
+
+    display: flex;
+
+   
+}
+
+.places div:hover,
+.places div:active {
+    background-color: transparent !important;
+    border: none !important;
+}
+.btn-primary, .places {
+    cursor: auto !important;
+}
+.btn-primary h5 {
+    font-size: 1.3rem;
+    padding: 5px;
+    border-radius: 5px;
+
+    transition: .5s;
+
+    
+}
+.centers {
+    cursor: pointer !important;
+}
+.btn-primary div {
+    display: grid;
+    text-align: left;
+}
+
+.span {
+    font-size: 2rem !important;
+}
+.span:hover {
+    background-color: transparent !important;
+    color: #fff !important;
+    cursor: auto !important;
+}
+.traducion {
+    font-size: 1rem !important;
+    font-weight: 300;
+    margin-top: -15px;
+}
+
+.btn-primary .traducion:hover {
+    background-color: transparent !important;
+    border: none !important;
+    color: #fff;
+    cursor: auto;
+}
+.btn-primary h5:hover {
+    color: gold;
+    background-color: #ffffff00;
+}
+
+.btn-outline-light {
+    border: none !important;
+}
+
+.bi-geo-alt-fill {
+    color: rgb(230, 44, 44);
+}
+
+
+.locais__proximos {
+    margin-top: 4%;
+    margin-left: -20px;
+    z-index: 99999999;
+}
+
+.todos__locais {
+    float: right;
+    margin-top: 5%;
+    z-index: 9;
+}
+
+.modal {
+    z-index: 9999999999 !important;
+}
+
+
+
+#map {
+    height: 440px;
+    width: 600px;
+
+    border-radius: 5px;
+}
+
+/* Modal Grid Information */
+
+.modal-body {
+    display: grid;
+}
+
+#mod-2 {
+    height: 600px !important;
+}
+
+.bg {
+    height: 600px !important;
+}
+
+.flip {
+    transform: rotateX(360deg);
+    -webkit-transform: rotateX(360deg);
+    transition: .5s;
+    transform-style: preserve-3d;
+}
+
+.logo__centro {
+    filter: brightness(100%);
+    width: 360px;
+    position: relative;
+    margin-left: -30px;
+    top: 100px;
+}
+.card {
+    cursor: pointer;
+}
+
+.grid__informations {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    text-align: left;
+    width: 80%;
+
+    margin-top: 5%;
+
+    gap: 20px;
+
+    color: #0E3A5D;
+
+    transition: .5s;
+}
+
+.web {
+    text-decoration: none;
+    color:  #0E3A5D;
+}
+
+.web:hover {
+    color: #0E3A5D;
+}
+
+.bi-globe, .bi-envelope , .bi-telephone-fill, .bi-geo-alt-fill, .bi-instagram {
+    font-size: 1.3rem;
+}
+
+.bi-telephone-fill {
+    color: green;
+}
+.bi-globe {
+    color: blue;
+}
+
+.bi-envelope {
+    color: #0E3A5D;
+}
+
+.bi-instagram {
+    color: #C13584;
+}
+
+.btn-primary {
+    cursor: pointer !important;
+}
+
+.grid__informations a {
+    text-decoration: none;
+    color: #000;
+    text-transform: initial !important;
+
+}
+
+.grid__informations a:hover {
+    color: #0E3A5D;
+
+}
+
+#email {
+    position: relative;
+    margin-bottom: -5px;
+}
+
+#staticBackdropLabel {
+    font-size: 1.1rem !important;
+}
+
+#todos_locais:hover, #locais_proximos:hover {
+    background-color: transparent !important;
+    border: none;
+    color: gold;
+}
+
+.bi-globe {
+    color: #0D6EFD;
+}
+
+.d-block, .carousel-item, .carousel-inner {
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.301);
+
+}
+
+#img-card-1, #img-card-2, #img-card-3, #img-card-4, #img-card-5{
+    cursor: pointer;
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 1rem;
+}
+
+.offcanvas-body a {
+    text-decoration: none;
+    color: #0E3A5D;
+    text-transform: initial;
+}
+
+.offcanvas-body a:hover, .offcanvas-body a:active {
+    transition: .5s;
+    color: #0D6EFD;
+}
+
+.locais__proximos button {
+    position: relative;
+    margin-left: 10px;
+}
+
+.locationEx {
+    text-transform: initial !important;
+    font-weight: 1rem;
+}
+
+.leaflet-control-attribution {
+    display: none;
+}
+
+.leaflet-popup-content {
+    text-transform: initial;
+}
+/*
+    media query
+*/
+
+/*
+    ======== desktop ==========
+*/
+@media screen and (max-width: 1024px) {
+    .top__info {
+        position: relative;
+        top: 60px;
+    }
+    
+    .top__info h1 {
+        font-size: 2.5rem;
+    }
+    
+    .top__info p {
+        font-size: 1.2rem;
+        text-transform: capitalize;
+    }
+
+    #map {
+        position: relative;
+        top: -50px;
+        height: 320px;
+        width: 500px;
+    }
+
+    .span {
+        font-size: 1.5rem !important;
+    }
+    
+    .btn-primary h5 {
+        font-size: 1.1rem;
+    }
+    .traducion {
+        font-size: .8rem !important;
+    }
+
+    .places {
+        position: relative;
+        top: -60px;
+        margin-left: 5%;
+    }
+
+    .suqare__builds {
+        margin-bottom: -10px !important;
+    }
+
+    .locais__proximos {
+        position: relative;
+        top: -120px !important;
+        margin-left: -25px;
+ 
+    }
+    .todos__locais {
+        position: relative;
+        z-index: 9;
+ 
+    }
+
+    .btn-primary h5:active {
+        color: gold;
+        background-color: #ffffff00;
+    }
+
+    
+    .bg {
+        height: 450px !important;
+    }
+
+    #mod-2 {
+        height: 450px !important;
+    }
+
+}
+
+
+/*
+    ======== mobile ==========
+*/
+
+@media screen and (max-width: 850px){
+    #home {
+        height: 130vh;
+        background-position: center;
+        background-size: cover;
+    }
+    .top__info {
+        position: relative;
+        top: 120px;
+    }
+
+    .top__info h1 {
+        font-size: 2.5rem !important;
+        font-weight: bold;
+    }
+    
+    .top__info p {
+        font-size: .7rem;
+        text-transform: capitalize;
+    }
+ 
+    #map {
+        height: 320px;
+        width: 365px;
+        top: 25%;
+    }
+
+    .span {
+        font-size: 1.2rem !important;
+    }
+
+    .traducion {
+        font-size: .8rem !important;
+        font-weight: 300;
+        margin-top: -15px;
+    }
+
+    .btn-primary h5 {
+        font-size: .9rem;
+        padding: 5px;
+        border-radius: 5px;
+    
+        transition: .5s;
+
+    }
+
+    .suqare__builds {
+        position: relative;
+        top: 130px;
+        margin-left: -15px;
+    }
+
+    .locais__proximos {
+        position: relative;
+        top: 15%;
+        margin-left: -10px;
+    }
+
+    .btn-primary h5:active {
+        color: gold;
+        background-color: #ffffff00;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    #home {
+        height: 100vh !important;
+    }
+
+    .btn-primary h5:active {
+        color: gold;
+        background-color: #ffffff00;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #home {
+        height: 130vh !important;
+    }
+     
+}
+
+@media screen and (max-width: 640px){
+    #home {
+        height: 180vh !important;
+        background-position: center;
+    }
+    .top__info {
+        position: relative;
+        top: 70px !important;
+    }
+
+    .top__info h1 {
+        font-size: 2rem !important;
+        font-weight: 600 !important;
+    }
+    
+    .top__info p {
+        font-size: .9rem !important;
+        text-transform: capitalize;
+    }
+ 
+    #map {
+        height: 300px;
+        width: 320px !important;
+        top: 9% !important;
+
+        border-radius: 5px ;
+    }
+
+    .span {
+        font-size: 1.2rem !important;
+    }
+
+    .traducion {
+        font-size: .8rem !important;
+        font-weight: 300;
+        margin-top: -15px;
+    }
+
+    .btn-primary h5 {
+        font-size: 1rem !important;
+        padding: 5px;
+        border-radius: 5px;
+    
+        transition: .5s;
+
+    }
+
+    .suqare__builds {
+        position: relative;
+        top: 130px !important;
+        margin-left: -30px !important;
+    }
+
+    .locais__proximos {
+        position: relative;
+        top: 12% !important;
+        margin-left: -10px;
+    }
+
+    .todos__locais {
+        position: relative;
+        top: 4%;
+    }
+
+    .btn-primary h5:active {
+        color: gold;
+        background-color: #ffffff00;
+    }
+}
+
+@media screen and (max-width: 412px){
+    #home {
+        height: 160vh !important;
+        background-position: center;
+    }
+    .top__info {
+        position: relative;
+        top: 70px !important;
+    }
+
+    .top__info h1 {
+        font-size: 2rem !important;
+        font-weight: 600 !important;
+    }
+    
+    .top__info p {
+        font-size: .9rem !important;
+        text-transform: capitalize;
+    }
+ 
+    #map {
+        height: 300px;
+        width: 320px !important;
+        top: 9% !important;
+        left: 1%;
+        border-radius: 5px ;
+    }
+
+    .span {
+        font-size: 1.2rem !important;
+    }
+
+    .traducion {
+        font-size: .8rem !important;
+        font-weight: 300;
+        margin-top: -15px;
+    }
+
+    .btn-primary h5 {
+        font-size: 1rem !important;
+        padding: 5px;
+        border-radius: 5px;
+    
+        transition: .5s;
+
+    }
+
+    .suqare__builds {
+        position: relative;
+        top: 130px !important;
+        margin-left: -30px !important;
+    }
+
+    .locais__proximos {
+        position: relative;
+        top: 12% !important;
+        margin-left: -10px;
+    }
+
+    .todos__locais {
+        z-index: 9999 !important;
+        position: relative;
+        top: 4%;
+    }
+
+    .btn-primary h5:active {
+        color: gold;
+        background-color: #ffffff00;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #home {
+        height: 180vh !important;
+        overflow: hidden;
+    }
+
+    .bg {
+        height: 200px !important;
+    }
+
+    #mod-2 {
+        height: 200px !important;
+    }
+}
+
+
+
+
