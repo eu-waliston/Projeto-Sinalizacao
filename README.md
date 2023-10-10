@@ -8,5 +8,6 @@ As novas placas incluem as traduções para o inglês. Essa medida é de suma im
 
 Juntamente com essas placas, estará disponível um Qr Code que irá enviar o usuário para um ambiente web interativo que conterá além das informações já existentes nas placas, e outras também muito importantes. 
 
-![projeto-sinalicacao-3](https://github.com/wal-wizard/Projeto-Sinalizacao/assets/82295321/2bacbe60-a8ac-44fd-93ba-c12e3fc9e97e)
+![ezgif com-video-to-gif](https://github.com/wal-wizard/Projeto-Sinalizacao/assets/82295321/8686ec78-27e6-475a-a727-2476f4a513fc)
+
 
