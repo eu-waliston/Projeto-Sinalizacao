@@ -13,6 +13,7 @@ Juntamente com essas placas, estará disponível um Qr Code que irá enviar o us
  - html
  - css
  - javascript
+ - sass
    
 
 <div align="center">
